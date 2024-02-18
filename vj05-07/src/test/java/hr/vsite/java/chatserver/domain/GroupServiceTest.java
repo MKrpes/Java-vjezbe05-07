@@ -32,9 +32,7 @@ class GroupServiceTest {
     void createGroupNullName() {
         Group group = new Group();
 
-        Assertions.assertThrows(RuntimeException.class, () -> {
-            groupService.createGroup(group);
-        });
+        Assertions.assertThrows(RuntimeException.class, () -> groupService.createGroup(group));
     }
 
     @Test
@@ -42,15 +40,11 @@ class GroupServiceTest {
         Group group = new Group();
         group.setGroupName("");
 
-        Assertions.assertThrows(RuntimeException.class, () -> {
-            groupService.createGroup(group);
-        });
+        Assertions.assertThrows(RuntimeException.class, () -> groupService.createGroup(group));
     }
 
     @Test
     void createGroupNull() {
-        Assertions.assertThrows(RuntimeException.class, () -> {
-            groupService.createGroup(null);
-        });
+        Assertions.assertThrows(RuntimeException.class, () -> groupService.createGroup(null));
     }
 }
