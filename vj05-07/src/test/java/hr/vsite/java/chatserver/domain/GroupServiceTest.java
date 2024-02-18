@@ -15,10 +15,10 @@ class GroupServiceTest {
     @Test
     void createGroup() {
         Group group = new Group();
-        group.setGroupName("test");
+        group.setGroupName("testGroup");
         groupService.createGroup(group);
 
-        Group group2 = groupService.findGroups("test").get(0);
+        Group group2 = groupService.findGroups("testGroup").get(0);
 
         Assertions.assertEquals(group.getGroupName(), group2.getGroupName());
 
